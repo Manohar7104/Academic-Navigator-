@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://imgs.search.brave.com/NueN04yDDxtEcFwYv0ySn1kj1sbB4GStFZUqHk0efro/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wbHVz/LnVuc3BsYXNoLmNv/bS9wcmVtaXVtX3Bo/b3RvLTE3MDE4NDI5/MTIzNDUtNmE3ZTU5/MjY1YzRhP2ZtPWpw/ZyZxPTYwJnc9MzAw/MCZpeGxpYj1yYi00/LjEuMCZpeGlkPU0z/d3hNakEzZkRCOE1I/eHpaV0Z5WTJoOE1U/UjhmR052Ykc5eUpU/SXdZbUZqYTJkeWIz/VnVaSHhsYm53d2ZI/d3dmSHg4TUE9PQ");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(80%); /* Adjust for desired brightness */
+  z-index: -1;
+}
+
+/* Ensure the content is above the pseudo-element */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 24rem;
+}
